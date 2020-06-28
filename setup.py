@@ -1,6 +1,9 @@
 from setuptools import setup
 from Cython.Build import cythonize
 import setuptools
+import os
+
+desc = open(os.path.join(os.path.dirname(__file__), 'README.md'))
 
 setup(
 	name="kerl",
@@ -8,7 +11,7 @@ setup(
 	author="j-pack",
 	author_email="iamjojozm@icloud.com",
 	description='A Basic Framework based off of Kivy, Still Using Cython, and OpenGL ES.',
-	long_description='# KErL\n\nA Basic Framework based off of Kivy, Still Using Cython, and OpenGL ES.',
+	long_description=desc.read(),
 	long_description_content_type="text/markdown",
 	packages=setuptools.find_packages(),
 	classifiers=[
@@ -18,3 +21,5 @@ setup(
 	],
 	python_requires='>=3.6, >=4.0'
 )
+
+desc.close()
