@@ -1,9 +1,9 @@
 ''' A Basic Framework based off of Kivy, Still Using Cython, and OpenGL ES. '''
 
-import kerl.graphics
-import kerl.application
-import kerl.widget
-import kerl.window
-import kerl.event
-import kerl.mainloop
-import kerl.canvas
+import KErL.kerl.graphics
+import KErL.kerl.application
+import KErL.kerl.widget
+import KErL.kerl.window
+import KErL.kerl.event
+import KErL.kerl.mainloop
+import KErL.kerl.canvas

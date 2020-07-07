@@ -1,6 +1,11 @@
+from OpenGL.GL import *
+from OpenGL.GLU import *
+from OpenGL.GLUT import *
 from kerl.canvas import *
+from OpenGL.GL import shaders
+from numpy import * as np
 
-class WidgetError(Exception): pass #Raised when there is an error with a widget.
+class WidgetError(Exception): pass # Raised when there is an error with a widget.
 
 class Widget(object):
 	''' A Widget object. '''
@@ -9,7 +14,8 @@ class Widget(object):
 		self.canvas = canvas
 		self.parent = parent
 		self.children = children
-	
+		glBegin()
+		
 	def add_child(self, child):
 		if child == self:
 			raise WidgetError("Widgets Never get added as a child to themselves.")
