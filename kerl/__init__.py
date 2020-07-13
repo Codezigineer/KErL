@@ -7,3 +7,4 @@ import KErL.kerl.window
 import KErL.kerl.event
 import KErL.kerl.mainloop
 import KErL.kerl.canvas
+import KErL.kerl.font

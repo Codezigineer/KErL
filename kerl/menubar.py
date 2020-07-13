@@ -1,17 +1,17 @@
-from kerl.display import *
+from OpenGL.GL import *
 
-class MenuBar(Display):
+class MenuBar:
 	def __init__(self, name):
 		self.name = name
 		self.items = [MenuBarItem(self, self.name)]
-		self.pixels = [pixel for pixel in self.items.pixels]
+		glBegin()
 
 class MenuBarItemError(Exception):
 	''' Raised when athere is an error with a menubar item. '''
 	
 	pass
 
-class MenuBarItem(Display):
+class MenuBarItem:
 	''' A Menu Bar Item shown in the menubar. '''
 	
 	def __init__(self, menubar, title):
@@ -23,7 +23,9 @@ class MenuBarItem(Display):
 		menubar.items.append(self) # The Menu bar object is attached to this object, and this object is attached to the menu bar object.
 		self.menubar = menubar #   ^^
 		self.hovered_over = False # When an instance of this object is instantiated, the mouse did not hover.
-		self.pixels = []
+		glBegin()
+		glClearColor(0.5, 0.5, 0.5, 0)
+		glColor(0.5, 0.5, 0.5, 0)
 		
 	def _onmousehover(self):
 		if not self.hovered_over:

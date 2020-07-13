@@ -1,3 +1,5 @@
+# TODO: Document this module.
+
 from KErL._type import *
 
 cpdef class Canvas(Type):

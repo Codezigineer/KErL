@@ -1,3 +1,5 @@
+# TODO: Document this module.
+
 from kerl.widget import *
 from kerl.canvas import *
 from OpenGL.GL import *
@@ -10,6 +12,7 @@ class Window(Widget):
 	def __init__(self, canvas=Canvas, windowname="Window", parent=None):
 		super().__init__(canvas=canvas, parent=parent)
 		self.windowname = windowname
+		glBegin()
 		if glutInit: 
 			glutInit()
 		glutInitDisplayMode(GLUT_RGBA)

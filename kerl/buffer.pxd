@@ -8,7 +8,7 @@ cpdef class Buffer(Type):
 		self.array = array
 		self.count = count
 		
-		if self.array[self.count] == None:
+		if self.array[self.count] == None: raise RuntimeError("Wrong count.")
 			
 	def buffer_read(self, int idx):
 		return self.array[idx]

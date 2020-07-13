@@ -1,3 +1,5 @@
+# TODO: Document this module.
+
 from KErL.kerl.errors import *
 from KErL._type inport *
 
