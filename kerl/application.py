@@ -9,7 +9,9 @@ class Application(MainLoop, Type):
 	
 	def __init__(self, window, icon=os.path.join(os.path.dirname(__file__), 'icon.png')):
 		if window is None:
-			raise InternalError("No window specified.")
+			InternalError("No window specified.")
+		elif type(window) != Window:
+			InternalError("Not a window.")
 		super().__init__()
 		self.argc = sys.argc
 		self.argv = sys.argv

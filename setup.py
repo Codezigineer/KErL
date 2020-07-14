@@ -10,9 +10,9 @@ def getfiles():
 		return
 	else: 
 		pass
-	path = os.getcwd().append("/nohup.out")
+	path = (os.getcwd() + "/nohup.out")
 	file = open(path)
-	result = _suffixedby(file.read())
+	result = _su(file.read())
 	
 	for string in result:
 		if string.endswith(".pxd"):
@@ -21,7 +21,7 @@ def getfiles():
 	
 	return result
 files = getfiles()
-def _suffixedby(string):
+def _su(string):
     start, end = 0, 0
        
     while start < len(string):
